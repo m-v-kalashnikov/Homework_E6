@@ -2,7 +2,7 @@ import os
 
 from flask import Flask, render_template, request, redirect, url_for
 
-from app.fibonacci import cache_data, is_positiv_integer
+from .fibonacci import cache_data, is_positiv_integer
 
 app = Flask(__name__)
 port = int(os.environ.get("PORT", 5000))
