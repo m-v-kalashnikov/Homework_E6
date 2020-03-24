@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  flask:
+    build: .
+    ports:
+      - 8081:8081
+    depends_on:
+      - memcached
+  environment:
+    - PORT=8081
+  memcached:
+    image: memcached:1.5.22-alpine
