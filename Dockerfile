@@ -6,7 +6,7 @@ COPY ./requirements.txt /app/requirements.txt
 
 COPY ./app/app.py /app/app.py
 
-COPY ./app/templates/index.html /app/templates/index.html
+COPY ./templates/index.html /templates/index.html
 
 WORKDIR /app
 
