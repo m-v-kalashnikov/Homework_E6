@@ -6,7 +6,7 @@ from functools import lru_cache
 from pymemcache.client import base
 
 
-CACHE_MEMCACHED_SERVER = ('35.187.180.236', 'localhost')
+CACHE_MEMCACHED_SERVER = '35.187.180.236'
 CACHE_MEMCACHED_PORT = 11211
 
 
