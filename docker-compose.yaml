@@ -10,6 +10,8 @@ services:
     environment:
       - PORT=8081
       - DEBUG=False
+    links:
+      - memcached
   memcached:
     image: memcached:1.5.22-alpine
     ports:
