@@ -3,8 +3,6 @@ version: '3.7'
 services:
   flask:
     build: .
-    volumes:
-      - ./templates:/templates
     ports:
       - 8081:8081
     depends_on:
@@ -14,3 +12,5 @@ services:
       - DEBUG=False
   memcached:
     image: memcached:1.5.22-alpine
+    ports:
+      - "11211:11211"
