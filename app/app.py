@@ -6,10 +6,6 @@ from functools import lru_cache
 from pymemcache.client import base
 
 
-CACHE_MEMCACHED_SERVER = '35.187.180.236'
-CACHE_MEMCACHED_PORT = 11211
-
-
 def json_serializer(key, value):
     if type(value) == str:
         return value, 1
@@ -24,7 +20,7 @@ def json_deserializer(key, value, flags):
     raise Exception("Unknown serialization format")
 
 
-client = base.Client((CACHE_MEMCACHED_SERVER, CACHE_MEMCACHED_PORT),
+client = base.Client(('35.187.180.236', 11211),
                      serializer=json_serializer,
                      deserializer=json_deserializer)
 
