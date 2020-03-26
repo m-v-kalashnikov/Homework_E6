@@ -5,7 +5,7 @@ from flask import Flask, render_template, request
 # Более правильный импорт. (Из документации pymemcache)
 from pymemcache.client.base import Client
 
-client = Client(('35.187.180.236', 11211))
+client = Client(('localhost', 11211))
 # Максимальный лимит рекурсии, но лучше бы в данном случае вообще без неё.
 sys.setrecursionlimit(2000)
 
